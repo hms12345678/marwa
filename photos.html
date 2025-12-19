@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكاياتي ليكي ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap');
+
+        body {
+            margin: 0; padding: 20px;
+            background: linear-gradient(135deg, #fce0e6 0%, #e0e6fc 100%);
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            padding-bottom: 80px; /* مساحة عشان الزرار العايم */
+        }
+
+        h1 { 
+            font-family: 'Amiri', serif; 
+            color: #4a081d; 
+            font-size: 32px; 
+            margin-bottom: 10px;
+        }
+
+        .subtitle { color: #666; font-size: 15px; margin-bottom: 30px; }
+
+        /* حاوية الكروت */
+        .story-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* تنسيق الكارت الواحد */
+        .photo-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.5);
+            animation: slideUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 3px solid #fce0e6;
+        }
+
+        /* مساحة الكلام تحت الصورة */
+        .photo-text {
+            padding: 20px;
+            text-align: right;
+            background: #fff;
+        }
+
+        .photo-text h3 {
+            margin: 0 0 10px 0;
+            color: #4a081d;
+            font-size: 18px;
+            font-family: 'Amiri', serif;
+            border-bottom: 1px dashed #ffb7b2;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .photo-text p {
+            margin: 0;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* زر الرجوع العايم */
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 30px;
+            background-color: #4a081d;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>حكاياتي بالصور ❤️</h1>
+    <p class="subtitle">كل صورة ليها ذكرى.. وكل كلمة طالعة من قلبي</p>
+
+    <div class="story-container">
+        
+        <div class="photo-card" style="animation-delay: 0.2s;">
+            <img src="me1.jpg" alt="صورة 1">
+            <div class="photo-text">
+              
+                <h3>الصوره دي متصورينها قبل م نخش القاعه و نسلمها لجوزها كان شعورغريب فرح و في نفس الوقت حزن شعور ما بين ان انهارده فرح اختي و مابين ان من النهارده اختي مش هشوفها غير كل فين و فين و طبعا لانها الكبيره و كل اسراري بحكيهالها ف الموضوع كان صعب عليا بس طلاما شايفها سعيده ف انا اكيد فرحانلها </h3>
+            </div>
+        </div>
+
+        <div class="photo-card" style="animation-delay: 0.4s;">
+            <img src="me2.jpg" alt="صورة 2">
+            <div class="photo-text">
+                <h3>دي بقا انا و اختي التانيه و امي و الحج قبل بداية الفرح برضو </h3>
+              
+            </div>
+        </div>
+
+        <div class="photo-card" style="animation-delay: 0.6s;">
+            <img src="me3.jpg" alt="صورة 3">
+            <div class="photo-text">
+                <h3>دي بقا صوره ليا لوحدي انا متصورتش كتير لاني مكنتش فاضي اتصور بس الفوتوغرافر لسا مبعتش الصور بس معاه شوية صور حلوين لما يبعتهم هرفعهم برضو  اها ونسيت اقولك بنطلون البدله طويل شويه لان لما جبتها مكنتش فاضي اقيسها غير وقت م انا ماشي ف اضتريت البسها كدا</h3>
+            </div>
+        </div>
+
+
+
+<h4>المهم بعد اما تشوفي الصور ابعتيلي لاني محتاج اتكلم معاكي شويه و افضفض تمام❤️</h4>
+
+
+
+
+    </div>
+
+    <a href="index.html" class="back-btn">الرجوع للرئيسية 🏠</a>
+
+</body>
+</html>
