@@ -96,6 +96,64 @@
         @keyframes float-around {
             0% { transform: translate(0, 0) scale(0.8) rotate(-45deg); opacity: 0.7; } 25% { transform: translate(50%, -30%) scale(1) rotate(-45deg); opacity: 1; } 50% { transform: translate(100%, 0) scale(0.8) rotate(-45deg); opacity: 0.7; } 75% { transform: translate(50%, 30%) scale(1) rotate(-45deg); opacity: 1; } 100% { transform: translate(0, 0) scale(0.8) rotate(-45deg); opacity: 0.7; }
         }
+
+
+
+
+
+
+
+/* تأثير التعويم (Floating Animation) */
+@keyframes floating {
+            0% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(-2deg); }
+        }
+
+        .photo-watermark-link {
+            position: fixed; /* ثابت في مكانه مهما عملت سكرول */
+            bottom: 25px; /* مسافة من الأسفل */
+            right: 20px; /* مسافة من اليمين */
+            z-index: 9999; /* عشان يفضل فوق أي حاجة في الصفحة */
+            text-decoration: none;
+            background: #4a081d; /* لون نبيتي غامق وفخم */
+            padding: 12px 22px;
+            border-radius: 50px; /* حواف دائرية بالكامل */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* ظل تقيل عشان يبان إنه عايم */
+            border: 2px solid #ffb7b2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            /* تفعيل حركة التعويم */
+            animation: floating 3s ease-in-out infinite; 
+            transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* توقف الحركة وتكبر شوية لما تلمسها */
+        .photo-watermark-link:hover {
+            animation-play-state: paused;
+            transform: scale(1.1);
+            background: #2e0512;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .watermark-text {
+            font-family: 'Amiri', serif;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            white-space: nowrap; /* منع النص من النزول لسطر جديد */
+        }
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -152,17 +210,40 @@
         </div>
         
         <div class="sad-song-section">
-            <h3 class="sad-note">💔 </h3>
+            <h3 class="sad-note">💔 رسالة وداع بصوت حزين</h3>
             <audio id="sadFarewellAudio" preload="auto">
                 <source src="sad_farewell.mp3" type="audio/mp3"> 
                 متصفحك لا يدعم تشغيل الصوت.
             </audio>
-            <button id="playSadBtn" class="sad-control-button" onclick="playSadSong()">🎧</button>
+            <button id="playSadBtn" class="sad-control-button" onclick="playSadSong()">شغّل مقطع الوداع 🎧</button>
             <button id="pauseSadBtn" class="sad-control-button" onclick="pauseSadSong()" style="display:none;">إيقاف ⏸️</button>
         </div>
         <div class="message-section">
             <button id="openMessageBtn" onclick="showMessage()">💌 رسالة خاصة من القلب</button>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+        
+
+
+
+
+
+
+
         
     </div>
 
@@ -276,6 +357,7 @@
             }
         }
 
+
         function pauseSong() {
             const audio = document.getElementById("ourSong");
             const playBtn = document.getElementById("playBtn");
@@ -330,6 +412,34 @@
         }
         
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="photos.html" class="photo-watermark-link">
+    <span class="watermark-text">صور حابب اشاركها معاكي</span>
+    <span class="watermark-heart" style="font-size: 20px;">❤️</span>
+</a>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
